@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dict>
+    <!-- Merge this key/value inside the generated Runner Info.plist <dict>. -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Allow access to your video library so local videos can play in the feed.</string>
+</dict>
