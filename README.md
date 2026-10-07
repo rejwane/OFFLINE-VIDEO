@@ -40,6 +40,12 @@ flutter analyze
 
 The script generates the Android/iOS Flutter shell, copies in the app code, brands the launcher as MiniTok, applies gallery permissions and the iOS photo-library description, sets Android `minSdk` to 24, and runs `flutter pub get`.
 
+## Build an APK with GitHub Actions
+
+This repository includes `.github/workflows/android-apk.yml`. Upload the **contents** of this source folder to a GitHub repository, then either push a commit or open **Actions → Build Android APK → Run workflow**. GitHub installs Flutter and Java, runs the bootstrap script, builds the APK, and attaches `minitok-android-apk` as a downloadable workflow artifact.
+
+The workflow artifact is for sideload/testing. For Google Play or repeatable signed updates, configure your own Android release keystore using GitHub Secrets; never commit a keystore or passwords. The app itself remains local/offline—GitHub only downloads build dependencies while compiling.
+
 ## Native permission notes
 
 - Android 13+: `READ_MEDIA_IMAGES` and `READ_MEDIA_VIDEO` are included for `photo_manager`.
